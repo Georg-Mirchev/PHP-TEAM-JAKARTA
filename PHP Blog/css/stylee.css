@@ -1,0 +1,16 @@
+.login {
+    margin-top: 14px;
+}
+.loginForm {
+    width: 500px;
+    margin: 0 auto;
+}
+.panel-body {
+    height: 500px;
+}
+.sidebar-wrapper {
+    border: 1px solid black;
+    width: 250px;
+    height: 300px;
+    float: right;
+}
