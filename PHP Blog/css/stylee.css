@@ -7,6 +7,8 @@
 }
 .panel-body {
     height: 500px;
+    width: 75%;
+    float: left;
 }
 .sidebar-wrapper {
     border: 1px solid black;
