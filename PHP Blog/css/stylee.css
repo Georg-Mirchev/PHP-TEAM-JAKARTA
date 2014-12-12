@@ -6,13 +6,15 @@
     margin: 0 auto;
 }
 .panel-body {
-    height: 500px;
-    width: 75%;
     float: left;
+    width: 880px;
+}
+.panel-default {
 }
 .sidebar-wrapper {
     border: 1px solid black;
     width: 250px;
     height: 300px;
     float: right;
+    margin-top: 15px;
 }
