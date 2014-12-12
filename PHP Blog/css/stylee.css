@@ -12,9 +12,11 @@
 .panel-default {
 }
 .sidebar-wrapper {
-    border: 1px solid black;
     width: 250px;
     height: 300px;
     float: right;
     margin-top: 15px;
+}
+.sidebar-wrapper>div {
+    padding: 10px;
 }
