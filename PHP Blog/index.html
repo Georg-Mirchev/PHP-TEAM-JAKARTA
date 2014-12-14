@@ -37,7 +37,7 @@
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <a href="login.html" class="btn btn-default login">Login</a>
+						<button type="button" class="btn btn-default login" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Login</button>
                     </ul>
                     <form class="navbar-form navbar-right">
                         <input type="text" class="form-control col-lg-8" placeholder="Search">
@@ -46,6 +46,45 @@
             </div>
         </nav>
     </header>
+
+    <!--modal-login-form-popup-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="exampleModalLabel">Login</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <fieldset>
+                            <div class="form-group">
+                                <label for="username" class="col-lg-1 control-label"></label>
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control" id="username" placeholder="Username">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword" class="col-lg-1 control-label"></label>
+                                <div class="col-lg-10">
+                                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Remember me
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--Main Section-->
     <main>
         <!--Article and Sidebar Containers-->
@@ -89,5 +128,6 @@
     <footer>
         <div class="panel-footer container">Footer ?</div>
     </footer>
+
 </body>
 </html>
