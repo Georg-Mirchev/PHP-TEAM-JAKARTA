@@ -3,7 +3,6 @@
 $stmt = $db->prepare('SELECT postID, postTitle, postCont, postDate FROM blog_posts WHERE postID = :postID');
 $stmt->execute(array(':postID' => $_GET['id']));
 $row = $stmt->fetch();
-var_dump($row);
 
 //if post does not exists redirect user.
 if($row['postID'] == ''){
@@ -17,26 +16,44 @@ if($row['postID'] == ''){
 <head>
     <meta charset="utf-8">
     <title>Blog - <?php echo $row['postTitle'];?></title>
-    <link rel="stylesheet" href="style/normalize.css">
-    <link rel="stylesheet" href="style/main.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 <body>
 
-<div id="wrapper">
 
-    <h1>Blog</h1>
-    <hr />
-    <p><a href="./">Blog Index</a></p>
+<header>
+    <nav class="navbar navbar-default container" role="navigation">
+        <div class="container-fluid	">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="./">TEAM "JAKARTA"</a>
+            </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="./">Posts</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
 
-
+<main>
+        <div class="panel-body-default container">
+            <div class="panel panel-default">
+                <div class="panel-body">
     <?php
 
-    echo '<div>';
+    echo '<div class="posts">';
     echo '<h1>'.$row['postTitle'].'</h1>';
     echo '<p>Posted on '.date('jS M Y', strtotime($row['postDate'])).'</p>';
     echo '<p>'.$row['postCont'].'</p>';
     echo '</div>';
+
 
 if(isset($_POST['submit'])){
     $_POST = array_map( 'stripslashes', $_POST );
@@ -74,31 +91,41 @@ if(isset($_POST['submit'])){
 $stmt = $db->prepare('SELECT article_id, nameOfComm, comment, dateOfComm FROM blog_comments WHERE article_id = :postID ORDER BY dateOfComm DESC');
 $stmt->execute(array(':postID' => $_GET['id']));
 while($row = $stmt->fetch()){
-    var_dump($row);
+    echo '<blockquote>';
     echo "<h5>{$row['nameOfComm']}</h5>";
     echo "<h6>{$row['dateOfComm']}</h6>";
     echo "<p>{$row['comment']}</p>";
+    echo '</blockquote>';
 }
 
-
-
 ?>
-
-    <div>
-        <form action='' method='post'>
-
-            <p><label>Name</label><br />
-                <input type='text' name='postNameComment' value='<?php if(isset($error)){ echo $_POST['postTitle'];}?>'></p>
-
-            <p><label>Description</label><br />
-                <textarea name='postComment' cols='60' rows='10'><?php if(isset($error)){ echo $_POST['postDesc'];}?></textarea></p>
-
-            <p><input type='submit' name='submit' value='Submit'></p>
-
+                    <div class="well bs-component">
+        <form class="form-horizontal" action='' method='post'>
+            <fieldset>
+                <legend >Comment</legend><br />
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="postNameComment">Name</label>
+                            <div class="col-lg-10">
+                                <input type='text' id="postNameComment" name='postNameComment' value='<?php if(isset($error)){ echo $_POST['postTitle'];}?>'>
+                            </div>
+                    </div>
+                <div class="form-group">
+                    <label for="postComment" class="col-lg-2 control-label">Description<br /></label>
+                        <div class="col-lg-10">
+                            <textarea name='postComment' id="postComment" cols='47' rows='5' style="resize: none"><?php if(isset($error)){ echo $_POST['postDesc'];}?></textarea>
+                        </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <input class="btn btn-default" type='submit' name='submit' value='Submit'>
+                    </div>
+                </div>
+            </fieldset>
         </form>
-    </div>
-
-
-</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</main>
 </body>
 </html>
