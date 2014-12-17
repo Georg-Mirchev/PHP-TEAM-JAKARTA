@@ -10,8 +10,7 @@ if( $user->is_logged_in() ){ header('Location: index.php'); }
 <head>
     <meta charset="utf-8">
     <title>Admin Login</title>
-    <link rel="stylesheet" href="../style/normalize.css">
-    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../css/style.css"/>
 </head>
 <body>
 
@@ -41,12 +40,28 @@ if( $user->is_logged_in() ){ header('Location: index.php'); }
     if(isset($message)){ echo $message; }
     ?>
 
-    <form action="" method="post">
-        <p><label>Username</label><input type="text" name="username" value=""  /></p>
-        <p><label>Password</label><input type="password" name="password" value=""  /></p>
-        <p><label></label><input type="submit" name="submit" value="Login"  /></p>
+<div class="loginForm">
+    <form class="form-horizontal" action="" method="post">
+        <fieldset>
+            <div class="form-group">
+                <label for="username" class="col-lg-1 control-label"></label>
+                <div class="col-lg-10">
+                    <input class="form-control" type="text" name="username" value="" placeholder="Username"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password" class="col-lg-1 control-label"></label>
+                <div class="col-lg-10"><input class="form-control" type="password" name="password" value=""  placeholder="password"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-10 col-lg-offset-4">
+                    <input class="btn btn-primary" type="submit" name="submit" value="Login"  />
+                </div>
+            </div>
+        </fieldset>
     </form>
-
+</div>
 </div>
 </body>
 </html>

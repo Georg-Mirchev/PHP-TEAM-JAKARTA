@@ -14,9 +14,10 @@ if(!$user->is_logged_in()){ header('Location: login.php'); }
 </head>
 <body>
 
-<div id="wrapper">
-
     <?php include('menu.php');?>
+    <div class="panel-body-default container">
+        <div class="panel panel-default">
+            <div class="panel-body">
     <p><a href="users.php">User Admin Index</a></p>
 
     <h2>Edit User</h2>
@@ -137,11 +138,12 @@ if(!$user->is_logged_in()){ header('Location: login.php'); }
         <p><label>Email</label><br />
             <input type='text' name='email' value='<?php echo $row['email'];?>'></p>
 
-        <p><input type='submit' name='submit' value='Update User'></p>
+        <p><input class="btn btn-default" type='submit' name='submit' value='Update User'></p>
 
     </form>
 
+        </div>
+    </div>
 </div>
-
 </body>
 </html>	

@@ -7,8 +7,8 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-default container" role="navigation">
-            <div class="container-fluid	">
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="container-fluid	container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
                         <span class="icon-bar"></span>
@@ -20,29 +20,50 @@
                 <div class="navbar-collapse collapse navbar-responsive-collapse">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="index.php">Posts</a></li>
-                        <li><a href="#">About</a></li>
+<!--                        <li><a href="#">About</a></li>-->
                     </ul>
+                    <form class="navbar-form navbar-right search">
+                        <input type="text" class="form-control col-lg-8" placeholder="Search">
+                    </form>
                 </div>
             </div>
         </nav>
     </header>
 
     <main>
-        <div class="panel panel-default container">
-            <div class="panel-body">
-                <div class="panel panel-default">
+            <div class="panel-body-inverse container">
+                <div class="panel panel-inverse">
                     <div class="panel-body">
+
+                        <div class="sidebar">
+<!--                                <div class="panel-heading">-->
+<!--                                    <h3 class="panel-title">Recent posts</h3>-->
+<!--                                </div>-->
+<!--                                    <div class="panel-body">-->
+                                        <div class="list-group">
+                                            <a class="list-group-item active headingFontSize">
+                                                Recent posts
+                                            </a>
+                                            <?php require('sidebar.php'); ?>
+                                        </div>
+<!--                                    </div>-->
+                        </div>
+
     <?php
     try {
 
         $stmt = $db->query('SELECT postID, postTitle, postDesc, postDate FROM blog_posts ORDER BY postID DESC');
         while($row = $stmt->fetch()){
 
-            echo '<h2><a href="viewpost.php?id='.$row['postID'].'">'.$row['postTitle'].'</a></h2>';
-            echo '<p>Posted on '.date('jS M Y H:i:s', strtotime($row['postDate'])).'</p>';
+            echo '<div class="panel panel-default posts">';
+            echo '<div class="panel-heading"><a href="viewpost.php?id='.$row['postID'].'">'.$row['postTitle'].'</a></div>';
+//            echo '<h2><a href="viewpost.php?id='.$row['postID'].'">'.$row['postTitle'].'</a></h2>';
+            echo '<div class="panel-body content"><div class="postDate">Posted on '.date('jS M Y H:i:s', strtotime($row['postDate']));
+            echo '</div>';
             echo '<p>'.$row['postDesc'].'</p>';
-            echo '<p><a href="viewpost.php?id='.$row['postID'].'">Read More</a></p>';
-
+            echo '</div>';
+            echo '<div class="panel-footer"><a class="btn btn-primary btn-xs" href="viewpost.php?id='.$row['postID'].'">Read More</a></div>';
+            echo '</div>';
 
         }
 
@@ -50,21 +71,12 @@
         echo $e->getMessage();
     }
     ?>
-<<<<<<< HEAD
+
+
                         </div>
                     </div>
                 </div>
-            </div>
         </main>
-=======
-
-    <div id='sidebar'>
-        <?php require('sidebar.php'); ?>
-    </div>
-
-</div>
-
-
->>>>>>> origin/master
 </body>
 </html>
+

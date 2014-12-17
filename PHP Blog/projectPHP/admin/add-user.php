@@ -13,10 +13,10 @@ if(!$user->is_logged_in()){ header('Location: login.php'); }
     <link rel="stylesheet" href="../style/main.css">
 </head>
 <body>
-
-<div id="wrapper">
-
     <?php include('menu.php');?>
+    <div class="panel-body-default container">
+        <div class="panel panel-default">
+            <div class="panel-body">
     <p><a href="users.php">User Admin Index</a></p>
 
     <h2>Add User</h2>
@@ -96,8 +96,12 @@ if(!$user->is_logged_in()){ header('Location: login.php'); }
         <p><label>Email</label><br />
             <input type='text' name='email' value='<?php if(isset($error)){ echo $_POST['email'];}?>'></p>
 
-        <p><input type='submit' name='submit' value='Add User'></p>
+        <p><input class="btn btn-default" type='submit' name='submit' value='Add User'></p>
 
     </form>
 
+        </div>
+    </div>
 </div>
+</body>
+</html>

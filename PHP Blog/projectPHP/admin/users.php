@@ -1,4 +1,4 @@
-a<?php
+<?php
 
 require_once('../includes/config.php');
 
@@ -39,7 +39,6 @@ if(isset($_GET['deluser'])){
 </head>
 <body>
 
-<div id="wrapper">
 
     <?php include('menu.php');?>
 
@@ -49,13 +48,15 @@ if(isset($_GET['deluser'])){
         echo '<h3>User '.$_GET['action'].'.</h3>';
     }
     ?>
-
-    <table>
-        <tr>
-            <th>Username</th>
-            <th>Email</th>
-            <th>Action</th>
-        </tr>
+    <div class="panel-body-default container">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                    <table class="table table-striped table-hover">
+                        <tr class="active">
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Action</th>
+                        </tr>
         <?php
         try {
 
@@ -85,7 +86,7 @@ if(isset($_GET['deluser'])){
         ?>
     </table>
 
-    <p><a href='add-user.php'>Add User</a></p>
+    <a class="btn btn-primary" href='add-user.php'>Add User</a>
 
 </div>
 

@@ -25,10 +25,10 @@ if(!$user->is_logged_in()){ header('Location: login.php'); }
     </script>
 </head>
 <body>
-
-<div id="wrapper">
-
     <?php include('menu.php');?>
+    <div class="panel-body-default container">
+        <div class="panel panel-default">
+            <div class="panel-body">
     <p><a href="./">Blog Admin Index</a></p>
 
     <h2>Edit Post</h2>
@@ -121,10 +121,12 @@ if(!$user->is_logged_in()){ header('Location: login.php'); }
         <p><label>Content</label><br />
             <textarea name='postCont' cols='60' rows='10'><?php echo $row['postCont'];?></textarea></p>
 
-        <p><input type='submit' name='submit' value='Update'></p>
+        <p><input class="btn btn-default" type='submit' name='submit' value='Update'></p>
 
     </form>
 
+        </div>
+    </div>
 </div>
 
 </body>

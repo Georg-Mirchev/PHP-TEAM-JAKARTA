@@ -21,8 +21,6 @@ if(isset($_GET['delpost'])){
 <head>
     <meta charset="utf-8">
     <title>Admin</title>
-    <link rel="stylesheet" href="../style/normalize.css">
-    <link rel="stylesheet" href="../style/main.css">
     <script language="JavaScript" type="text/javascript">
         function delpost(id, title)
         {
@@ -34,9 +32,6 @@ if(isset($_GET['delpost'])){
     </script>
 </head>
 <body>
-
-<div id="wrapper">
-
     <?php include('menu.php');?>
 
     <?php
@@ -45,13 +40,15 @@ if(isset($_GET['delpost'])){
         echo '<h3>Post '.$_GET['action'].'.</h3>';
     }
     ?>
-
-    <table>
-        <tr>
-            <th>Title</th>
-            <th>Date</th>
-            <th>Action</th>
-        </tr>
+    <div class="panel-body-default container">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <table class="table table-striped table-hover">
+                    <tr class="active">
+                        <th>Title</th>
+                        <th>Date</th>
+                        <th>Action</th>
+                    </tr>
         <?php
         try {
 
@@ -77,11 +74,12 @@ if(isset($_GET['delpost'])){
             echo $e->getMessage();
         }
         ?>
-    </table>
+        </table>
 
-    <p><a href='add-post.php'>Add Post</a></p>
+        <a class="btn btn-primary" href='add-post.php'>Add Post</a>
 
-</div>
-
+            </div>
+        </div>
+    </div>
 </body>
 </html>
