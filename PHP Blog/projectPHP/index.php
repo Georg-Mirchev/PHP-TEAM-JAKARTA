@@ -34,6 +34,10 @@
     }
     ?>
 
+    <div id='sidebar'>
+        <?php require('sidebar.php'); ?>
+    </div>
+
 </div>
 
 

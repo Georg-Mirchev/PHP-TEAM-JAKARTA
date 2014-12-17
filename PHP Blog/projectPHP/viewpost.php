@@ -1,9 +1,9 @@
 <?php require('includes/config.php');
 
-$stmt = $db->prepare('SELECT postID, postTitle, postCont, postDate FROM blog_posts WHERE postID = :postID');
+$stmt = $db->prepare('SELECT postID,postDesc , postTitle, postCont, postDate FROM blog_posts WHERE postID = :postID');
 $stmt->execute(array(':postID' => $_GET['id']));
 $row = $stmt->fetch();
-var_dump($row);
+
 
 //if post does not exists redirect user.
 if($row['postID'] == ''){
@@ -34,6 +34,7 @@ if($row['postID'] == ''){
 
     echo '<div>';
     echo '<h1>'.$row['postTitle'].'</h1>';
+    echo '<h2>'.$row['postDesc'].'</h2>';
     echo '<p>Posted on '.date('jS M Y', strtotime($row['postDate'])).'</p>';
     echo '<p>'.$row['postCont'].'</p>';
     echo '</div>';
@@ -54,9 +55,9 @@ if(isset($_POST['submit'])){
             $stmt = $db->prepare('INSERT INTO blog_comments (article_id,nameOfComm,comment,dateOfComm) VALUES (:article_id, :nameOfComm, :comment, :dateOfComm)') ;
             $stmt->execute(array(
                 ':article_id' => $post_id_copy,
-                ':nameOfComm' => $postNameComment,
-                ':comment' => $postComment,
-                ':dateOfComm' => date('Y-m-d H:i:s')
+                ':nameOfComm' => htmlspecialchars($postNameComment),
+                ':comment' => htmlspecialchars($postComment),
+                ':dateOfComm' => date('y-m-d H:i:s')
             ));
 
 
@@ -74,7 +75,7 @@ if(isset($_POST['submit'])){
 $stmt = $db->prepare('SELECT article_id, nameOfComm, comment, dateOfComm FROM blog_comments WHERE article_id = :postID ORDER BY dateOfComm DESC');
 $stmt->execute(array(':postID' => $_GET['id']));
 while($row = $stmt->fetch()){
-    var_dump($row);
+
     echo "<h5>{$row['nameOfComm']}</h5>";
     echo "<h6>{$row['dateOfComm']}</h6>";
     echo "<p>{$row['comment']}</p>";
@@ -99,6 +100,9 @@ while($row = $stmt->fetch()){
     </div>
 
 
+</div>
+<div id='sidebar'>
+    <?php require('sidebar.php'); ?>
 </div>
 </body>
 </html>
