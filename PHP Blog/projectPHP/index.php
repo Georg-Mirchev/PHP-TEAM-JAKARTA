@@ -50,10 +50,21 @@
         echo $e->getMessage();
     }
     ?>
+<<<<<<< HEAD
                         </div>
                     </div>
                 </div>
             </div>
         </main>
+=======
+
+    <div id='sidebar'>
+        <?php require('sidebar.php'); ?>
+    </div>
+
+</div>
+
+
+>>>>>>> origin/master
 </body>
 </html>
