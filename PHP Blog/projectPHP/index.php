@@ -18,15 +18,13 @@
                     <a class="navbar-brand" href="index.php">TEAM "JAKARTA"</a>
                 </div>
                 <div class="navbar-collapse collapse navbar-responsive-collapse">
-                    <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav navbar-left">
                         <li class="active"><a href="index.php">Posts</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
                         <li><a href="https://github.com/infreezer/PHP-TEAM-JAKARTA" target="_blank  ">GitHub</a></li>
                     </ul>
-                    <form method="post" class="navbar-form navbar-right search">
-                        <input type="text" class="form-control col-lg-8" placeholder="Search">
-                    </form>
+<!--                    <form method="post" class="navbar-form navbar-right search">-->
+<!--                        <input type="text" class="form-control col-lg-8" placeholder="Search">-->
+<!--                    </form>-->
                 </div>
             </div>
         </nav>

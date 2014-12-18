@@ -32,7 +32,10 @@ if( $user->is_logged_in() ){ header('Location: index.php'); }
 
 
         } else {
-            $message = '<p class="error">Wrong username or password</p>';
+//            $message = '<p class="error">Wrong username or password</p>';
+            $message = '<div class="alert alert-dismissable alert-warning">
+                            <strong>Wrong username or password</strong>
+                        </div>';
         }
 
     }

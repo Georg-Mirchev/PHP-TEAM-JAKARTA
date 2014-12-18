@@ -5,6 +5,9 @@ body {
     width: 80%;
     float: left;
 }
+.posts:hover {
+    background-color: #F5F5F5;
+}
 .sidebar {
     width: 18%;
     float: right;
@@ -45,7 +48,7 @@ ul {
 .login {
     margin-top: 14px;
 }
-.loginForm {
+.loginForm, .alert {
     /*width: 250px;*/
     width: 18%;
     margin: 0 auto;
