@@ -39,29 +39,28 @@ if( $user->is_logged_in() ){ header('Location: index.php'); }
 
     if(isset($message)){ echo $message; }
     ?>
-
-<div class="loginForm">
-    <form class="form-horizontal" action="" method="post">
-        <fieldset>
-            <div class="form-group">
-                <label for="username" class="col-lg-1 control-label"></label>
-                <div class="col-lg-10">
-                    <input class="form-control" type="text" name="username" value="" placeholder="Username"/>
+    <div class="loginForm">
+        <form class="form-horizontal loginF" action="" method="post">
+            <fieldset>
+                <div class="form-group formGroup">
+                    <label for="username" class="col-lg-1 control-label"></label>
+                    <div class="col-lg-10">
+                        <input class="form-control" type="text" name="username" value="" placeholder="Username"/>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <label for="password" class="col-lg-1 control-label"></label>
-                <div class="col-lg-10"><input class="form-control" type="password" name="password" value=""  placeholder="password"/>
+                <div class="form-group formGroup">
+                    <label for="password" class="col-lg-1 control-label"></label>
+                    <div class="col-lg-10"><input class="form-control" type="password" name="password" value=""  placeholder="Password"/>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <div class="col-lg-10 col-lg-offset-4">
-                    <input class="btn btn-primary" type="submit" name="submit" value="Login"  />
+                <div class="form-group formGroup">
+                    <div class="col-lg-10 col-lg-offset-4">
+                        <input class="btn btn-primary" type="submit" name="submit" value="Login"  />
+                    </div>
                 </div>
-            </div>
-        </fieldset>
-    </form>
-</div>
+            </fieldset>
+        </form>
+    </div>
 </div>
 </body>
 </html>

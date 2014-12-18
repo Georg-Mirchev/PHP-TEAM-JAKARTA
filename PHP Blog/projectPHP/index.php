@@ -20,9 +20,12 @@
                 <div class="navbar-collapse collapse navbar-responsive-collapse">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="index.php">Posts</a></li>
-<!--                        <li><a href="#">About</a></li>-->
+<!--                        <li><a href="#">GitHub</a></li>-->
                     </ul>
-                    <form class="navbar-form navbar-right search">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">GitHub</a></li>
+                    </ul>
+                    <form method="post" class="navbar-form navbar-right search">
                         <input type="text" class="form-control col-lg-8" placeholder="Search">
                     </form>
                 </div>
