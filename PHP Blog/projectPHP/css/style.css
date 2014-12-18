@@ -5,24 +5,24 @@ body {
     width: 80%;
     float: left;
 }
+.posts:hover {
+    background-color: #F5F5F5;
+}
 .sidebar {
     width: 18%;
     float: right;
-    /*background-color: #f5f5f5!important;*/
-    /*position: absolute;*/
 }
-/*.maina, blockquote{*/
-    /*width: 80%;*/
-    /*float: left;*/
-/*}*/
-/*form, .well {*/
-    /*width: 80%;*/
-    /*float: left;*/
-/*}*/
+.clear {
+    clear: both;
+}
 .panel-heading, .panel-footer, .content {
     text-align: center;
 }
+.leftAlign {
+    text-align: left;
+}
 .postDate {
+    /*10120374*/
     font-size: 11px;
 }
 ul {
@@ -48,8 +48,25 @@ ul {
 .login {
     margin-top: 14px;
 }
-.loginForm {
-    width: 250px;
+.loginForm, .alert {
+    /*width: 250px;*/
+    width: 18%;
     margin: 0 auto;
     margin-top: 20px;
 }
+.loginF {
+    border: 1px solid transparent;
+    padding-top: 20px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    background-color: rgba(231, 231, 231, 0.48);
+}
+.formGroup {
+    margin-right: 0!important;
+}
+a:hover {
+    text-decoration: none!important;
+}
+.back {
+    border-color: #CACACA;
+}
+
