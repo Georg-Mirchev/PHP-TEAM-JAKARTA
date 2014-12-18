@@ -3,14 +3,14 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.0/paper/bootstrap.min.css" rel="stylesheet">
 <?php
+
 ob_start();
 session_start();
 
-
 define('DBHOST','localhost');
-define('DBUSER','pmaruq7f_pe6odb');
-define('DBPASS','po123123123');
-define('DBNAME','pmaruq7f_db');
+define('DBUSER','root');
+define('DBPASS','');
+define('DBNAME','db');
 
 $db = new PDO("mysql:host=".DBHOST.";dbname=".DBNAME, DBUSER, DBPASS);
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
