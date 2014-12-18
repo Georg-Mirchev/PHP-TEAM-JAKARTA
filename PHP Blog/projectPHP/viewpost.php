@@ -3,12 +3,8 @@
 $stmt = $db->prepare('SELECT postID,postDesc , postTitle, postCont, postDate FROM blog_posts WHERE postID = :postID');
 $stmt->execute(array(':postID' => $_GET['id']));
 $row = $stmt->fetch();
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
 
-//if post does not exists redirect user.
 if($row['postID'] == ''){
     header('Location: ./');
     exit;
@@ -96,11 +92,7 @@ if(isset($_POST['submit'])){
 $stmt = $db->prepare('SELECT article_id, nameOfComm, comment, dateOfComm FROM blog_comments WHERE article_id = :postID ORDER BY dateOfComm DESC');
 $stmt->execute(array(':postID' => $_GET['id']));
 while($row = $stmt->fetch()){
-<<<<<<< HEAD
-    echo '<blockquote>';
-=======
 
->>>>>>> origin/master
     echo "<h5>{$row['nameOfComm']}</h5>";
     echo "<h6>{$row['dateOfComm']}</h6>";
     echo "<p>{$row['comment']}</p>";
@@ -131,13 +123,13 @@ while($row = $stmt->fetch()){
                 </div>
             </fieldset>
         </form>
-<<<<<<< HEAD
+
                     </div>
                 </div>
             </div>
         </div>
 </main>
-=======
+
     </div>
 
 
@@ -145,6 +137,22 @@ while($row = $stmt->fetch()){
 <div id='sidebar'>
     <?php require('sidebar.php'); ?>
 </div>
->>>>>>> origin/master
+<!--<h1>Search</h1>-->
+<!--<hr />-->
+<!--<form method="get">-->
+<!--    <input type="text" name="search" id="search" placeholder="search"/>-->
+<!--    <input type="submit" name="submit"/>-->
+<!--</form>-->
+<!---->
+<?php
+//var_dump($_SERVER);
+//var_dump($_GET['search']);
+//if(isset($_GET['search'])) {
+//    require('search.php');
+//    $k = end(explode('/',$_SERVER['REQUEST_URI']));
+//  // header("Location: ".$k."&search=".$_GET['search']);
+//}
+//?>
+
 </body>
 </html>
