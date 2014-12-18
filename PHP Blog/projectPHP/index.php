@@ -20,10 +20,9 @@
                 <div class="navbar-collapse collapse navbar-responsive-collapse">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="index.php">Posts</a></li>
-<!--                        <li><a href="#">GitHub</a></li>-->
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">GitHub</a></li>
+                        <li><a href="https://github.com/infreezer/PHP-TEAM-JAKARTA" target="_blank  ">GitHub</a></li>
                     </ul>
                     <form method="post" class="navbar-form navbar-right search">
                         <input type="text" class="form-control col-lg-8" placeholder="Search">
@@ -39,19 +38,13 @@
                     <div class="panel-body">
 
                         <div class="sidebar">
-<!--                                <div class="panel-heading">-->
-<!--                                    <h3 class="panel-title">Recent posts</h3>-->
-<!--                                </div>-->
-<!--                                    <div class="panel-body">-->
                                         <div class="list-group">
                                             <a class="list-group-item active headingFontSize">
                                                 Recent posts
                                             </a>
                                             <?php require('sidebar.php'); ?>
                                         </div>
-<!--                                    </div>-->
                         </div>
-
     <?php
     try {
 

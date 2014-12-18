@@ -54,8 +54,9 @@ if( $user->is_logged_in() ){ header('Location: index.php'); }
                     </div>
                 </div>
                 <div class="form-group formGroup">
-                    <div class="col-lg-10 col-lg-offset-4">
+                    <div class="col-lg-10 col-lg-offset-3">
                         <input class="btn btn-primary" type="submit" name="submit" value="Login"  />
+                        <a href="../" class="btn btn-default back">Back</a>
                     </div>
                 </div>
             </fieldset>

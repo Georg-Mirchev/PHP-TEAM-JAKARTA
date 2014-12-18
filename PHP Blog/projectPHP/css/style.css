@@ -8,17 +8,10 @@ body {
 .sidebar {
     width: 18%;
     float: right;
-    /*background-color: #f5f5f5!important;*/
-    /*position: absolute;*/
 }
-/*.maina, blockquote{*/
-    /*width: 80%;*/
-    /*float: left;*/
-/*}*/
-/*form, .well {*/
-    /*width: 80%;*/
-    /*float: left;*/
-/*}*/
+.clear {
+    clear: both;
+}
 .panel-heading, .panel-footer, .content {
     text-align: center;
 }
@@ -70,5 +63,7 @@ ul {
 a:hover {
     text-decoration: none!important;
 }
-
+.back {
+    border-color: #CACACA;
+}
 
