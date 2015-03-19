@@ -51,3 +51,33 @@
   <li>Admin panel: add / edit / delete posts, comments, tags, etc.</li>
   </ul>
 </ul>
+<h3>Deliverables</h3>
+<p>Put the following in a ZIP archive and submit it (each team member submits the same file)</p>
+<ul>
+<li>The complete source code of your project (PHP, HTML, CSS, images, scripts and other files).</li>
+<li>A presentation of your project (e.g. PowerPoint slides) of your project. It should provide the following information:</li>
+<ul>
+<li>Project name and purpose – what you have created?</li>
+<li>Team name, list of team members.</li>
+<li>Contributions of each team member.</li>
+<li>Technical description.</li>
+</ul>
+<li>Any other information (optionally).</li>
+</ul>
+<h3>Public Project Defense</h3>
+<p>Each team will have to deliver a public defense of its work in front of the other students, trainers and assistants. Teams will have only 10 minutes for the following:</p>
+<ul>
+<li>Demonstrate the web application (very shortly).</li>
+<li>Show the source code and explain how it works.</li>
+<li>Explain how each team member has contributed: display the commit logs in the Source Control System you are using.</li>
+<li>Optionally you might prepare a presentation (3-4 slides).</li>
+</ul>
+<p>Please be strict in timing! On the 10th minute you will be interrupted! It is good idea to leave the last 2 minutes for questions from the other students, trainers and assistants.</p>
+<p>Be well prepared for presenting maximum of your work for minimum time. Bring your own laptop. Test it preliminary with the multimedia projector. Open the project assets beforehand to save time.</p>
+<h3>Assessment Criteria</h3>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
