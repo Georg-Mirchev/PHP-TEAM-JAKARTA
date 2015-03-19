@@ -32,3 +32,22 @@
 <li>You do not need to support old browsers like IE9</li>
 </ul>
 </ul>
+<h3>Forbidden Techniques and Tools</h3>
+<p>Using CMS / blog systems (like WordPress, Drupal and Joomla), forum systems (like phpBB), photo album systems (like Plogger) and audio album systems (like kPlaylist) is forbidden.</p>
+<h3>Blog</h3>
+<p><strong>Required</strong> functionalities</p>
+<ul>
+<li>View all posts (optionally with paging).</li>
+<li>Adding new posts by the blog owner (after login or password protected). Each post must have tags. </li>
+<li>Adding comments for every post by visitors – each visitor must fill out his name, email (optionally) and comment text.</li>
+<li>Implement a sidebar holding a list of posts sorted by month / year / etc. and a list of the most popular tags.</li>
+<li>Counter of visits for each post.</li>
+<li>Functionality for searching by tags.</li>
+<br>
+<p>Optional functionalities</p>
+<ul>
+<li>Use a database (like MySQL or MongoDB) or cloud-based data storage (like MongoLab and RedisLab).</li>
+<li>User registration and user profiles.</li>
+<li>Admin panel: add / edit / delete posts, comments, tags, etc.<li>
+</ul>
+</ul>
