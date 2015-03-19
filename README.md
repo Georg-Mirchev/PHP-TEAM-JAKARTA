@@ -45,9 +45,9 @@
 <li>Functionality for searching by tags.</li>
 <br>
 <p>Optional functionalities</p>
-<ul>
-<li>Use a database (like MySQL or MongoDB) or cloud-based data storage (like MongoLab and RedisLab).</li>
-<li>User registration and user profiles.</li>
-<li>Admin panel: add / edit / delete posts, comments, tags, etc.<li>
-</ul>
+  <ul>
+  <li>Use a database (like MySQL or MongoDB) or cloud-based data storage (like MongoLab and RedisLab).</li>
+  <li>User registration and user profiles.</li>
+  <li>Admin panel: add / edit / delete posts, comments, tags, etc.</li>
+  </ul>
 </ul>
