@@ -76,8 +76,12 @@
 <p>Be well prepared for presenting maximum of your work for minimum time. Bring your own laptop. Test it preliminary with the multimedia projector. Open the project assets beforehand to save time.</p>
 <h3>Assessment Criteria</h3>
 <ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li><strong>Functionality</strong> (all the required functionalities according to the type of project you choose) – 0…12</li>
+<li><strong>Overview</strong> (HTML / CSS / Usability / UX) – 0…2</li>
+<li><strong>Code quality</strong> (correct naming, code formatting, separation of concerns, etc.) – 0…3</li>
+<li><strong>Teamwork*</strong> (GitHub used; each team member contributed in 5 different days; distribution of tasks) – 0…3</li>
+<li><strong>Bonus</strong> (bonus point are given for implementing optional functionalities according to the type of project you choose) – 0..5</li>
+</ul>
+<p>* If not all team members have contributed to the project, this does not affect the Teamwork points.</p>
+<h3>Give Feedback about Your Teammates</h3>
+<p>You will be invited to provide feedback about all your teammates, their attitude to this project, their technical skills, their team working skills, their contribution to the project, etc. The feedback is important part of the project evaluation so take it seriously and be honest.</p>
